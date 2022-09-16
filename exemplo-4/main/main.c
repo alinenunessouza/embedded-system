@@ -4,6 +4,7 @@
 #include "freertos/semphr.h"
 #include "driver/gpio.h"
 #include "esp_adc_cal.h"
+#include 
 
 #define PINO_LED 2
 
@@ -11,7 +12,7 @@
 #define DEFAULT_VREF 1100 //use adc3_vref_gpio() to obtain a better estimate
 #define NO_OF_SAMPLES 50 //multisampling, dá uma estabilidade um pouco melhor
 
-// control LED Brightness With a Potentiometer
+// control LED Brightness With a Potentiometer (PWM)
 
 SemaphoreHandle_t semaphore = NULL;
 
